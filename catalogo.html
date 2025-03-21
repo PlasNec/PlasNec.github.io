@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .categorias {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .categorias button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .categorias button:hover {
+            background-color: #2ecc71;
+        }
+
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .producto {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+            margin: 10px;
+        }
+
+        .producto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .producto h2,
+        .producto p,
+        .producto .precio {
+            margin: 10px 0;
+        }
+
+        .precio {
+            font-size: 20px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .producto a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #27ae60;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .producto a:hover {
+            background-color: #2ecc71;
+        }
+
+        .categoria {
+            display: none;
+        }
+
+        .categoria.activa {
+            display: grid;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            height: 35px;
+            text-align: center;
+            border: 2px solid #066b0e;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            background-color: #fff5f7;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="number"]:focus {
+            border-color: #165805;
+            box-shadow: 0 0 8px rgba(71, 255, 126, 0.5);
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Catálogo de Productos</h1>
+    <div class="categorias">
+        <button onclick="mostrarCategoria('bolsas')">Categoría de Bolsas</button>
+        <button onclick="mostrarCategoria('servilletas')">Categoría de Servilletas</button>
+        <button onclick="mostrarCategoria('aseo')">Categoría de Aseo</button>
+    </div>
+
+    <div id="bolsas" class="catalogo categoria activa">
+        <div class="producto">
+            <img src="IMAGENES/BOlsa transparente 5x8.png" alt="Bolsa 5x8">
+            <h2>BOLSA 5x8 (1/2 LIBRA) TRANSP</h2>
+            <p>Paquete de 50 unidades</p>
+            <p class="precio">$1,300</p>
+            <input type="number" id="BOLSAA_1/2TRANSP" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 5x8 (1/2 LIBRA) TRANSP(PAQ)', '$1,300','BOLSA_1/2TRANSP')">Agregar al
+                carrito</a>
+
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/BOLSA 6x9 (LIBRA) TRANSP.png" alt="Bolsa 6x9">
+            <h2>BOLSA 6x9 (LIBRA) TRANSP</h2>
+            <p>Paquete de 50 unidades</p>
+            <p class="precio">$1,500</p>
+            <input type="number" id="BOLSA_LIBRATRANSP" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 6x9 (LIBRA) TRANSP(PAQ)', '$1,500','BOLSA_LIBRATRANSP')">Agregar al
+                carrito</a>
+
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/BOLSA 7x12 (1K) TRANSP.png" alt="Bolsa 7x12">
+            <h2>BOLSA 7x12 (1K) TRANSP</h2>
+            <p>Paquete de 50 unidades</p>
+            <p class="precio">$2,300</p>
+            <input type="number" id="BOLSA_1KTRANSP" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 7x12 (1K) TRANSP(PAQ)', '$2,300','BOLSA_1KTRANSP')">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/BOLSA PLASTICA TRANSPARENTE 8X15.jpg" alt="Bolsa 8x15">
+            <h2>BOLSA 8x15 (2K) TRANSP</h2>
+            <p>Paquete de 50 unidades</p>
+            <p class="precio">$2,300</p>
+            <input type="number" id="BOLSA_2KTRANSP" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 8x15 (2k) TRANSP(PAQ)', '$2,300','BOLSA_2KTRANSP')">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/BOLSA PLASTICA TRANSPARENTE 10X15 .png" alt="Bolsa 10x15">
+            <h2>BOLSA 10x15 (3K) TRANSP</h2>
+            <p>Paquete de 50 unidades</p>
+            <p class="precio">$2,400</p>
+            <input type="number" id="BOLSA_3KTRANSP" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 10x15 (3k) TRANSP(PAQ)', '$2,400','BOLSA_3KTRANSP')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Bolsa Transparente 12 x17.jpg" alt="Bolsa 12x17">
+            <h2>BOLSA 12x17 (5K) TRANSP</h2>
+            <p>Paquete de 50 unidades</p>
+            <p class="precio">$2,600</p>
+            <input type="number" id="BOLSA_5KTRANSP" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 12x17 (5k) TRANSP(PAQ)', '$2,600','BOLSA_5KTRANSP')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Chillona.jpg" alt="Bolsa  CHillona 7X11">
+            <h2>BOLSA 7X11 CHILLONA 2LB</h2>
+            <p>Paquete de 50 unidades</p>
+            <p class="precio">$1,000</p>
+            <input type="number" id="BOLSA_CHILLONA" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 7x11 (CHILLONA)(PAQ)', '$1,000','BOLSA_CHILLONA')">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Bolsa 25k BOlsa rosado.jpg" alt="Bolsa 25K Rec Rosado Bio">
+            <h2>BOLSA 25K ROSADO </h2>
+            <p>Paquete de 25 kilos</p>
+            <p class="precio">11,000</p>
+            <input type="number" id="BOLSA_25KROSADO" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 25K (ROSADO)(UND)', '$11,000','BOLSA_25KROSADO')">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Bolsa de 3k kilos Mejor.jpg" alt="Bolsa 3k Rec Rosado Bio">
+            <h2>BOLSA 3K ROSADO</h2>
+            <p>Paquete de 90 unidades</p>
+            <p class="precio">$2,000</p>
+            <input type="number" id="BOLSA_3KROSADO" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 3K (ROSADO)(UND)', '$2,000','BOLSA_3KROSADO')">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Bolsa de 2k kilos blanca.png" alt="Bolsa 2k Blanca Bio">
+            <h2>Bolsa 2k Blanca</h2>
+            <p>Paquete de 90 unidades</p>
+            <p class="precio">$1,800</p>
+            <input type="number" id="BOLSA_2KBLANCA" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 2K (BLANCA)(UND)', '$1,800','BOLSA_2KBLANCA')">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/bolsa de 5 kilos blanca.png" alt="Bolsa 5k Blanca Bio">
+            <h2>Bolsas 5k Blanca</h2>
+            <p>Paquete de 90 unidades</p>
+            <p class="precio">$3,500</p>
+            <input type="number" id="BOLSA_5KBLANCA" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 5K (BLANCA)(UND)', '$3,500','BOLSA_5KBLANCA')">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/bolsa de 10 kilos .png" alt="Bolsa 10k Blanca Bio">
+            <h2>Bolsa 10k Blanca</h2>
+            <p>Paquete de 90 unidades</p>
+            <p class="precio">$5,000</p>
+            <input type="number" id="BOLSA_10KBLANCA" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 10K (BLANCA)(UND)', '$5,000','BOLSA_10KBLANCA')">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/BOlsa de 25 kilos negras.jpg" alt="Bolsa 25k negra Bio">
+            <h2>BOLSA 25K NEGRA</h2>
+            <p>Paquete de 90 unidades</p>
+            <p class="precio">$3,800.00</p>
+            <input type="number" id="bolsa_25KNEGRA" min="1" value="1">
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 25K (NEGRA)(UND)', '$3,800','bolsa_25KNEGRA')">Agregar al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Bolsa de aseo.png" alt="Bolsa de aseo">
+            <h2>Bolsa de aseo 200 LITROS</h2>
+            <p>Paquete de 1 unidades</p>
+            <p class="precio">$1,000</p>
+            <input type="number" id="bolsa_aseo200lt" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA ASEO 200 LITROS(UND)', '$1,000', 'bolsa_aseo200lt')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Bolsa de precorte alta 8x12.png" alt="Bolsa de precorte alta">
+            <h2>BOLSA PREC 8X14 (2K) Alta</h2>
+            <p>Rollo Por Kilo</p>
+            <p class="precio">$13,400</p>
+            <input type="number" id="bolsa_prec2kAlta" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA PREC 8X14 (2K) Alta(KILO)', '$13,400', 'bolsa_prec2kAlta')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/bolsa de precorte alta 10x10.png" alt="Bolsa de precorte alta 10x15">
+            <h2>BOLSA PREC 10X15 (3K) Alta</h2>
+            <p>ROLLO POR KILO</p>
+            <p class="precio">$13,400</p>
+            <input type="number" id="bolsa_prec3kAlta" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA PREC 10X15 (3K) Alta(KILO)', '$13,400', 'bolsa_prec3kAlta')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/bolsa de precorte 12x18.png" alt="Bolsa de precorte alta 12x18">
+            <h2>BOLSA PREC 12X18 (5K) Alta</h2>
+            <p>ROLLO POR KILO</p>
+            <p class="precio">$13,400</p>
+            <input type="number" id="bolsa_prec5kAlta" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA PREC 12X18 (5K) Alta(KILO)', '$13,400', 'bolsa_prec5kAlta')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/BOlsa de Precorte baja 8x12.png" alt="Bolsa de precorte alta 8x12">
+            <h2>BOLSA PREC 8X14 (2K) Blanca</h2>
+            <p>ROLLO POR KILO</p>
+            <p class="precio">$13,400</p>
+            <input type="number" id="bolsa_prec2kBlanca" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA PREC 8X14 (2K) BLANCA(KILO)', '$13,400', 'bolsa_prec2kBlanca')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Bolsa precorte 10x10 baja.jpg" alt="Bolsa de precorte alta 10x10">
+            <h2>BOLSA PREC 10X15 (3K) Blanca</h2>
+            <p>ROLLO POR KILO</p>
+            <p class="precio">$13,400</p>
+            <input type="number" id="bolsa_prec3kBlanca" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA PREC 10X15 (3K) BLANCA(KILO)', '$13,400', 'bolsa_prec3kBlanca')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Bolsa precorte 12x18 baja.jpg" alt="Bolsa de precorte alta 12x18">
+            <h2>BOLSA PREC 12X18 (5K) Blanca</h2>
+            <p>ROLLO POR KILO</p>
+            <p class="precio">$13,400</p>
+            <input type="number" id="bolsa_prec5kBlanca" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA PREC 12X18 (5K) BLANCA(KILO)', '$13,400', 'bolsa_prec5kBlanca')">Agregar al
+                carrito</a>
+        </div>
+        <!-- Agregar más productos de la categoría Bolsas -->
+    </div>
+
+    <div id="servilletas" class="catalogo categoria">
+        <div class="producto">
+            <img src="IMAGENES/servilleta 300 .png" alt="Servilletas">
+            <h2>SERVI SKAAP PQ*300UN</h2>
+            <p>Paquete de 300 unidades</p>
+            <p class="precio">$3,500</p>
+            <input type="number" id="cantidad_servi300" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'SERVI SKAAP PQ*300(UND)', '$3,500', 'cantidad_servi300')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/servilleta 200.png" alt="Servilletas">
+            <h2>SERVI SKAAP CAFETERIA PQ*200UND </h2>
+            <p>Paquete de 200 unidades</p>
+            <p class="precio">$3,300</p>
+            <input type="number" id="cantidad_servi200" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'SERVI SKAAP PQ*200(UND)', '$3,300', 'cantidad_servi200')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/servilleta de 180.png" alt="Servilletas">
+            <h2>SERVI SKAAP PART 1A1 BCA*180UN</h2>
+            <p>Paquete de 180 unidades</p>
+            <p class="precio">$2,300</p>
+            <input type="number" id="cantidad_servi180" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'SERVI SKAAP PART 1A1 BCA*180(UND)', '$2,300', 'cantidad_servi180')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/servilleta de 150.png" alt="Servilletas">
+            <h2>SERVI SKAAP PQ*150UND</h2>
+            <p>Paquete de 150 unidades</p>
+            <p class="precio">$1,800</p>
+            <input type="number" id="cantidad_servi150" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'SERVI SKAAP PQ*150(UND)', '$1,800', 'cantidad_servi150')">Agregar al
+                carrito</a>
+        </div>
+        <!-- Agregar más productos de la categoría Servilletas -->
+    </div>
+
+    <div id="aseo" class="catalogo categoria">
+        <div class="producto">
+            <img src="IMAGENES/Escoba Jumbo.jpeg" alt="Escoba Jumbo">
+            <h2>ESCOBA JUMBO CON PALO</h2>
+            <p>ESCOBA JUMBO CON PALO</p>
+            <p class="precio">$7,600</p>
+            <input type="number" id="cantidad_escobaJumbo" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'ESCOBA JUMBO CON PALO(UND)', '$7,600', 'cantidad_escobaJumbo')">Agregar
+                al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Escoaba delta fluo.png" alt="delta FLUO">
+            <h2>ESCOBA FLUO CON PALO</h2>
+            <p>ESCOBA FLUO CON PALO</p>
+            <p class="precio">$7,000</p>
+            <input type="number" id="cantidad_escobafluo" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'ESCOBA FLUO CON PALO(UND)', '$7,000', 'cantidad_escobafluo')">Agregar
+                al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Trapero copa 300.jpg" alt="TRAPERO">
+            <h2>TRAPERO 300GR CON PALO</h2>
+            <p>TRAPERO 300GR CON PALO</p>
+            <p class="precio">$8,600</p>
+            <input type="number" id="cantidad_trapero" min="1" value="1" >
+            <a href="#"
+                onclick="agregarAlCarrito(event,'TRAPERO 300GR CON PALO(UND)', '$8,600', 'cantidad_trapero')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/Balde 12l .png" alt="BALDE 12 LITROS">
+            <h2>BALDE 12 LITROS</h2>
+            <p>BALDE 12 LITROS</p>
+            <p class="precio">$6,500</p>
+            <input type="number" id="cantidad_balde12" min="1" value="1" >
+            <a href="#" onclick="agregarAlCarrito(event,'BALDE 12 LITROS(UND)', '$6,500', 'cantidad_balde12')">Agregar
+                al carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/recogedor.png" alt="recogedor CON BANDA">
+            <h2>RECOGEDOR CON BANDA</h2>
+            <p>RECOGEDOR CON BANDA</p>
+            <p class="precio">$6,000</p>
+            <input type="number" id="cantidad_recogedor" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'RECOGEDOR CON BANDA(UND)', '$6,000', 'cantidad_recogedor')">Agregar al
+                carrito</a>
+        </div>
+        <div class="producto">
+            <img src="IMAGENES/CEPILLO SANITADOR.PNG" alt="CEPILLO SANITARIO ">
+            <h2>CEPILLO SANITARIO CON BASE</h2>
+            <p>CEPILLO SANITARIO CO BASE</p>
+            <p class="precio">$3,800</p>
+            <input type="number" id="cantidad_cepillo" min="1" value="1">
+            <a href="#"
+                onclick="agregarAlCarrito(event,'CEPILLO SANITARIO CON BASE(UND)', '$3,800','cantidad_cepillo')">Agregar
+                al carrito</a>
+        </div>
+
+        <!-- Agregar más productos de la categoría Aseo -->
+    </div>
+
+    <script>
+        function mostrarCategoria(categoria) {
+            document.querySelectorAll('.categoria').forEach(cat => {
+                cat.classList.remove('activa');
+            });
+            document.getElementById(categoria).classList.add('activa');
+        }
+    </script>
+
+    <button id="enviarPedido" onclick="enviarPedidoWhatsApp()"
+        style="display: none; background-color: #25D366; color: white; padding: 15px; border: none; border-radius: 5px; font-size: 18px; position: fixed; bottom: 20px; right: 20px; cursor: pointer;">Enviar
+        pedido por WhatsApp</button>
+
+
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(event, nombre, precio, cantidadId) {
+            event.preventDefault();
+            let cantidad = document.getElementById(cantidadId).value;
+
+            if (cantidad < 1) {
+                alert("La cantidad debe ser al menos 1.");
+                return;
+            }
+            carrito.push({ nombre, precio, cantidad });
+            alert(`"${nombre}" agregado al carrito.`);
+            document.getElementById("enviarPedido").style.display = "block";
+        }
+
+        function enviarPedidoWhatsApp() {
+            if (carrito.length === 0) return;
+
+            let mensaje = "Hola, quiero hacer un pedido:\n\n";
+            carrito.forEach((item, index) => {
+                mensaje += `${index + 1}. Cantidad ${item.cantidad} x ${item.nombre} - ${item.precio} c/u \n`;
+            });
+
+            let telefono = "573213778174"; // Reemplaza con tu número de WhatsApp
+            let url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
