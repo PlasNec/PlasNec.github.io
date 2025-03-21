@@ -8,140 +8,139 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(180deg, #f5f7fa, #c3cfe2);
-    color: #2c3e50;
-}
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #f5f7fa, #c3cfe2);
+            color: #2c3e50;
+        }
 
-h1 {
-    text-align: center;
-    margin-top: 20px;
-    color: #34495e;
-    font-weight: 700;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #34495e;
+            font-weight: 700;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
 
-.categorias {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 30px 0;
-}
+        .categorias {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
 
-.categorias button {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .categorias button {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.categorias button:hover {
-    background: linear-gradient(135deg, #5b0fba, #1f5ee0);
-    transform: scale(1.1);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-}
+        .categorias button:hover {
+            background: linear-gradient(135deg, #5b0fba, #1f5ee0);
+            transform: scale(1.1);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
 
-.catalogo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 40px;
-    justify-items: center;
-}
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            justify-items: center;
+        }
 
-.producto {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    max-width: 350px;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-}
+        .producto {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            max-width: 350px;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
 
-.producto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
-}
+        .producto:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+        }
 
-.producto img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-bottom: 4px solid #6a11cb;
-}
+        .producto img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 4px solid #6a11cb;
+        }
 
-.producto h2,
-.producto p,
-.producto .precio {
-    margin: 15px 0;
-}
+        .producto h2,
+        .producto p,
+        .producto .precio {
+            margin: 15px 0;
+        }
 
-.precio {
-    font-size: 24px;
-    font-weight: bold;
-    color: #6a11cb;
-}
+        .precio {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6a11cb;
+        }
 
-.producto a {
-    display: inline-block;
-    text-decoration: none;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-weight: 700;
-    transition: all 0.3s;
-}
+        .producto a {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
 
-.producto a:hover {
-    background: linear-gradient(135deg, #5b0fba, #1f5ee0);
-    transform: scale(1.1);
-}
+        .producto a:hover {
+            background: linear-gradient(135deg, #5b0fba, #1f5ee0);
+            transform: scale(1.1);
+        }
 
-.categoria {
-    display: none;
-}
+        .categoria {
+            display: none;
+        }
 
-.categoria.activa {
-    display: grid;
-}
+        .categoria.activa {
+            display: grid;
+        }
 
-input[type="number"] {
-    width: 75px;
-    height: 40px;
-    text-align: center;
-    border: 2px solid #6a11cb;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    background-color: #ecf0f1;
-    outline: none;
-    transition: all 0.3s ease-in-out;
-}
+        input[type="number"] {
+            width: 75px;
+            height: 40px;
+            text-align: center;
+            border: 2px solid #6a11cb;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            background-color: #ecf0f1;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
 
-input[type="number"]:focus {
-    border-color: #2575fc;
-    box-shadow: 0 0 12px rgba(37, 117, 252, 0.5);
-}
+        input[type="number"]:focus {
+            border-color: #2575fc;
+            box-shadow: 0 0 12px rgba(37, 117, 252, 0.5);
+        }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -160,7 +159,9 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 50 unidades</p>
             <p class="precio">$1,300</p>
             <input type="number" id="BOLSA_1/2TRANSP" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 5x8 (1/2 LIBRA) TRANSP(PAQ)', '$1,300','BOLSA_1/2TRANSP')">Agregar al
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA 5x8 (1/2 LIBRA) TRANSP(PAQ)', '$1,300','BOLSA_1/2TRANSP')">Agregar
+                al
                 carrito</a>
 
         </div>
@@ -170,7 +171,9 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 50 unidades</p>
             <p class="precio">$1,500</p>
             <input type="number" id="BOLSA_LIBRATRANSP" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 6x9 (LIBRA) TRANSP(PAQ)', '$1,500','BOLSA_LIBRATRANSP')">Agregar al
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA 6x9 (LIBRA) TRANSP(PAQ)', '$1,500','BOLSA_LIBRATRANSP')">Agregar
+                al
                 carrito</a>
 
         </div>
@@ -180,7 +183,9 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 50 unidades</p>
             <p class="precio">$2,300</p>
             <input type="number" id="BOLSA_1KTRANSP" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 7x12 (1K) TRANSP(PAQ)', '$2,300','BOLSA_1KTRANSP')">Agregar al carrito</a>
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA 7x12 (1K) TRANSP(PAQ)', '$2,300','BOLSA_1KTRANSP')">Agregar al
+                carrito</a>
         </div>
         <div class="producto">
             <img src="IMAGENES/BOLSA PLASTICA TRANSPARENTE 8X15.jpg" alt="Bolsa 8x15">
@@ -188,7 +193,9 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 50 unidades</p>
             <p class="precio">$2,300</p>
             <input type="number" id="BOLSA_2KTRANSP" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 8x15 (2k) TRANSP(PAQ)', '$2,300','BOLSA_2KTRANSP')">Agregar al carrito</a>
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA 8x15 (2k) TRANSP(PAQ)', '$2,300','BOLSA_2KTRANSP')">Agregar al
+                carrito</a>
         </div>
         <div class="producto">
             <img src="IMAGENES/BOLSA PLASTICA TRANSPARENTE 10X15 .png" alt="Bolsa 10x15">
@@ -196,7 +203,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 50 unidades</p>
             <p class="precio">$2,400</p>
             <input type="number" id="BOLSA_3KTRANSP" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 10x15 (3k) TRANSP(PAQ)', '$2,400','BOLSA_3KTRANSP')">Agregar al
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA 10x15 (3k) TRANSP(PAQ)', '$2,400','BOLSA_3KTRANSP')">Agregar al
                 carrito</a>
         </div>
         <div class="producto">
@@ -205,7 +213,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 50 unidades</p>
             <p class="precio">$2,600</p>
             <input type="number" id="BOLSA_5KTRANSP" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 12x17 (5k) TRANSP(PAQ)', '$2,600','BOLSA_5KTRANSP')">Agregar al
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA 12x17 (5k) TRANSP(PAQ)', '$2,600','BOLSA_5KTRANSP')">Agregar al
                 carrito</a>
         </div>
         <div class="producto">
@@ -214,7 +223,9 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 50 unidades</p>
             <p class="precio">$1,000</p>
             <input type="number" id="BOLSA_CHILLONA" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 7x11 (CHILLONA)(PAQ)', '$1,000','BOLSA_CHILLONA')">Agregar al carrito</a>
+            <a href="#"
+                onclick="agregarAlCarrito(event,'BOLSA 7x11 (CHILLONA)(PAQ)', '$1,000','BOLSA_CHILLONA')">Agregar al
+                carrito</a>
         </div>
         <div class="producto">
             <img src="IMAGENES/Bolsa 25k BOlsa rosado.jpg" alt="Bolsa 25K Rec Rosado Bio">
@@ -222,7 +233,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 25 kilos</p>
             <p class="precio">11,000</p>
             <input type="number" id="BOLSA_25KROSADO" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 25K (ROSADO)(UND)', '$11,000','BOLSA_25KROSADO')">Agregar al carrito</a>
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 25K (ROSADO)(UND)', '$11,000','BOLSA_25KROSADO')">Agregar
+                al carrito</a>
         </div>
         <div class="producto">
             <img src="IMAGENES/Bolsa de 3k kilos Mejor.jpg" alt="Bolsa 3k Rec Rosado Bio">
@@ -230,7 +242,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 90 unidades</p>
             <p class="precio">$2,000</p>
             <input type="number" id="BOLSA_3KROSADO" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 3K (ROSADO)(UND)', '$2,000','BOLSA_3KROSADO')">Agregar al carrito</a>
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 3K (ROSADO)(UND)', '$2,000','BOLSA_3KROSADO')">Agregar al
+                carrito</a>
         </div>
         <div class="producto">
             <img src="IMAGENES/Bolsa de 2k kilos blanca.png" alt="Bolsa 2k Blanca Bio">
@@ -238,7 +251,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 90 unidades</p>
             <p class="precio">$1,800</p>
             <input type="number" id="BOLSA_2KBLANCA" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 2K (BLANCA)(UND)', '$1,800','BOLSA_2KBLANCA')">Agregar al carrito</a>
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 2K (BLANCA)(UND)', '$1,800','BOLSA_2KBLANCA')">Agregar al
+                carrito</a>
         </div>
         <div class="producto">
             <img src="IMAGENES/bolsa de 5 kilos blanca.png" alt="Bolsa 5k Blanca Bio">
@@ -246,7 +260,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 90 unidades</p>
             <p class="precio">$3,500</p>
             <input type="number" id="BOLSA_5KBLANCA" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 5K (BLANCA)(UND)', '$3,500','BOLSA_5KBLANCA')">Agregar al carrito</a>
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 5K (BLANCA)(UND)', '$3,500','BOLSA_5KBLANCA')">Agregar al
+                carrito</a>
         </div>
         <div class="producto">
             <img src="IMAGENES/bolsa de 10 kilos .png" alt="Bolsa 10k Blanca Bio">
@@ -254,7 +269,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 90 unidades</p>
             <p class="precio">$5,000</p>
             <input type="number" id="BOLSA_10KBLANCA" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 10K (BLANCA)(UND)', '$5,000','BOLSA_10KBLANCA')">Agregar al carrito</a>
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 10K (BLANCA)(UND)', '$5,000','BOLSA_10KBLANCA')">Agregar
+                al carrito</a>
         </div>
         <div class="producto">
             <img src="IMAGENES/BOlsa de 25 kilos negras.jpg" alt="Bolsa 25k negra Bio">
@@ -262,7 +278,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p>Paquete de 90 unidades</p>
             <p class="precio">$8,100.00</p>
             <input type="number" id="bolsa_25KNEGRA" min="1" value="1">
-            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 25K (NEGRA)(UND)', '$8,100','bolsa_25KNEGRA')">Agregar al carrito</a>
+            <a href="#" onclick="agregarAlCarrito(event,'BOLSA 25K (NEGRA)(UND)', '$8,100','bolsa_25KNEGRA')">Agregar al
+                carrito</a>
         </div>
         <div class="producto">
             <img src="IMAGENES/Bolsa de aseo.png" alt="Bolsa de aseo">
@@ -281,7 +298,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p class="precio">$13,400</p>
             <input type="number" id="bolsa_prec2kAlta" min="1" value="1">
             <a href="#"
-                onclick="agregarAlCarrito(event,'BOLSA PREC 8X14 (2K) Alta(KILO)', '$13,400', 'bolsa_prec2kAlta')">Agregar al
+                onclick="agregarAlCarrito(event,'BOLSA PREC 8X14 (2K) Alta(KILO)', '$13,400', 'bolsa_prec2kAlta')">Agregar
+                al
                 carrito</a>
         </div>
         <div class="producto">
@@ -291,7 +309,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p class="precio">$13,400</p>
             <input type="number" id="bolsa_prec3kAlta" min="1" value="1">
             <a href="#"
-                onclick="agregarAlCarrito(event,'BOLSA PREC 10X15 (3K) Alta(KILO)', '$13,400', 'bolsa_prec3kAlta')">Agregar al
+                onclick="agregarAlCarrito(event,'BOLSA PREC 10X15 (3K) Alta(KILO)', '$13,400', 'bolsa_prec3kAlta')">Agregar
+                al
                 carrito</a>
         </div>
         <div class="producto">
@@ -301,7 +320,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p class="precio">$13,400</p>
             <input type="number" id="bolsa_prec5kAlta" min="1" value="1">
             <a href="#"
-                onclick="agregarAlCarrito(event,'BOLSA PREC 12X18 (5K) Alta(KILO)', '$13,400', 'bolsa_prec5kAlta')">Agregar al
+                onclick="agregarAlCarrito(event,'BOLSA PREC 12X18 (5K) Alta(KILO)', '$13,400', 'bolsa_prec5kAlta')">Agregar
+                al
                 carrito</a>
         </div>
         <div class="producto">
@@ -311,7 +331,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p class="precio">$13,400</p>
             <input type="number" id="bolsa_prec2kBlanca" min="1" value="1">
             <a href="#"
-                onclick="agregarAlCarrito(event,'BOLSA PREC 8X14 (2K) BLANCA(KILO)', '$13,400', 'bolsa_prec2kBlanca')">Agregar al
+                onclick="agregarAlCarrito(event,'BOLSA PREC 8X14 (2K) BLANCA(KILO)', '$13,400', 'bolsa_prec2kBlanca')">Agregar
+                al
                 carrito</a>
         </div>
         <div class="producto">
@@ -321,7 +342,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p class="precio">$13,400</p>
             <input type="number" id="bolsa_prec3kBlanca" min="1" value="1">
             <a href="#"
-                onclick="agregarAlCarrito(event,'BOLSA PREC 10X15 (3K) BLANCA(KILO)', '$13,400', 'bolsa_prec3kBlanca')">Agregar al
+                onclick="agregarAlCarrito(event,'BOLSA PREC 10X15 (3K) BLANCA(KILO)', '$13,400', 'bolsa_prec3kBlanca')">Agregar
+                al
                 carrito</a>
         </div>
         <div class="producto">
@@ -331,7 +353,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p class="precio">$13,400</p>
             <input type="number" id="bolsa_prec5kBlanca" min="1" value="1">
             <a href="#"
-                onclick="agregarAlCarrito(event,'BOLSA PREC 12X18 (5K) BLANCA(KILO)', '$13,400', 'bolsa_prec5kBlanca')">Agregar al
+                onclick="agregarAlCarrito(event,'BOLSA PREC 12X18 (5K) BLANCA(KILO)', '$13,400', 'bolsa_prec5kBlanca')">Agregar
+                al
                 carrito</a>
         </div>
         <!-- Agregar más productos de la categoría Bolsas -->
@@ -365,7 +388,8 @@ input[type="number"]::-webkit-outer-spin-button {
             <p class="precio">$2,300</p>
             <input type="number" id="cantidad_servi180" min="1" value="1">
             <a href="#"
-                onclick="agregarAlCarrito(event,'SERVI SKAAP PART 1A1 BCA*180(UND)', '$2,300', 'cantidad_servi180')">Agregar al
+                onclick="agregarAlCarrito(event,'SERVI SKAAP PART 1A1 BCA*180(UND)', '$2,300', 'cantidad_servi180')">Agregar
+                al
                 carrito</a>
         </div>
         <div class="producto">
@@ -407,7 +431,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <h2>TRAPERO 300GR CON PALO</h2>
             <p>TRAPERO 300GR CON PALO</p>
             <p class="precio">$8,600</p>
-            <input type="number" id="cantidad_trapero" min="1" value="1" >
+            <input type="number" id="cantidad_trapero" min="1" value="1">
             <a href="#"
                 onclick="agregarAlCarrito(event,'TRAPERO 300GR CON PALO(UND)', '$8,600', 'cantidad_trapero')">Agregar al
                 carrito</a>
@@ -417,7 +441,7 @@ input[type="number"]::-webkit-outer-spin-button {
             <h2>BALDE 12 LITROS</h2>
             <p>BALDE 12 LITROS</p>
             <p class="precio">$6,500</p>
-            <input type="number" id="cantidad_balde12" min="1" value="1" >
+            <input type="number" id="cantidad_balde12" min="1" value="1">
             <a href="#" onclick="agregarAlCarrito(event,'BALDE 12 LITROS(UND)', '$6,500', 'cantidad_balde12')">Agregar
                 al carrito</a>
         </div>
